@@ -24,13 +24,8 @@ import javax.visrec.ri.ml.classification.ImageClassifierNetwork;
  */
 public class UseTrainedModel {
     
-    public static void main(String[] args) {
-
-        
-        
+    public static void main(String[] args) {  
         try {
-            
-            
             // load trained convolutioal network from file
             FeedForwardNetwork neuralNet =  FileIO.createFromFile("SpamClassifier.dnet", FeedForwardNetwork.class);
 
@@ -38,7 +33,7 @@ public class UseTrainedModel {
             BinaryClassifier<float[]> spamClassifier = new FeedForwardNetBinaryClassifier(neuralNet);
             
             // load data for testing purposes
-            TabularDataSet<MLDataItem> dataSet = DataSets.readCsv("spam.csv", 57, 1, true);             
+            TabularDataSet<MLDataItem> dataSet = DataSets.readCsv("email_spam.csv", 57, 1, true);             
             
             // get a single feature vector/array for testing
             float[] testEmail = dataSet.get(0).getInput().getValues();
@@ -49,7 +44,6 @@ public class UseTrainedModel {
 
             // shutdown the thread pool
             DeepNetts.shutdown();
-
         } catch (IOException | ClassNotFoundException ioe) {
             Logger.getLogger(UseTrainedModel.class.getName()).log(Level.SEVERE, null, ioe);
         }

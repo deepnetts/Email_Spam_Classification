@@ -36,7 +36,7 @@ public class BuildAndTrainModel {
         int numOutputs = 1;
         
         // load data from csv file
-        DataSet dataSet = DataSets.readCsv("spam.csv", numInputs, numOutputs, true);             
+        DataSet dataSet = DataSets.readCsv("email_spam.csv", numInputs, numOutputs, true);             
 
         // randomly split data set into train and test set: 70% for training and rest 30% for testing
         TrainTestPair trainTest = DataSets.trainTestSplit(dataSet, 0.7);
