@@ -4,23 +4,16 @@ import deepnetts.core.DeepNetts;
 import deepnetts.data.DataSets;
 import deepnetts.data.MLDataItem;
 import deepnetts.data.TabularDataSet;
-import deepnetts.net.ConvolutionalNetwork;
 import deepnetts.net.FeedForwardNetwork;
 import deepnetts.util.FileIO;
 import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.visrec.ml.classification.BinaryClassifier;
-import javax.visrec.ml.data.DataSet;
 import javax.visrec.ri.ml.classification.FeedForwardNetBinaryClassifier;
-import javax.visrec.ri.ml.classification.ImageClassifierNetwork;
 
 /**
  * This example shows how to load and create instance of trained network from file.
- * 
- * @author Zoran Sevarac <zoran.sevarac@deepnetts.com>
  */
 public class UseTrainedModel {
     

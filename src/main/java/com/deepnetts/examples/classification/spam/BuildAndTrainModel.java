@@ -18,14 +18,13 @@ import deepnetts.data.norm.MaxScaler;
  * This example shows how to create a binary classifier for spam classification, using Feed Forward neural network.
  * Data is given in CSV file.
  *
- * For the best performance and accuracy the recommended way to run this example is to use Deep Netts Pro, with Free Development License.
+ * For the best performance and accuracy the highly recommended way to run this example is to use Deep Netts Pro.
  * https://www.deepnetts.com/download
  *
  * Step-by-step guide for setting up Deep Netts is available at
  * https://www.deepnetts.com/quickstart
  * 
  * @see FeedForwardNetwork
- * @author Zoran Sevarac <zoran.sevarac@deepnetts.com>
  */
 public class BuildAndTrainModel {
 
