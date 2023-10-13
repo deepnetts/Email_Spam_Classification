@@ -19,10 +19,10 @@ public class UseTrainedModel {
     
     public static void main(String[] args) {  
         try {
-            // load trained convolutioal network from file
+            // load trained neural network from file
             FeedForwardNetwork neuralNet =  FileIO.createFromFile("SpamClassifier.dnet", FeedForwardNetwork.class);
 
-            // create classifier using loaded trained network
+            // create classifier from loaded trained network
             BinaryClassifier<float[]> spamClassifier = new FeedForwardNetBinaryClassifier(neuralNet);
             
             // load data for testing purposes
